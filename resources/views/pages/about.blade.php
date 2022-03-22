@@ -1,5 +1,10 @@
 @extends('main')
 @section('title', '| About')
+@section('active')
+    <li><a href="/">Home </a></li>
+    <li class="active"><a href="/about">About</a></li>
+    <li><a href="/contact">Contact</a></li>
+@endsection
 @section('content')
     <div class="row">
         <div class="col-md-12">
