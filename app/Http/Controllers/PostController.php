@@ -1,9 +1,11 @@
 <?php
 
+
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Post;
 class PostController extends Controller
 {
     /**
@@ -14,6 +16,7 @@ class PostController extends Controller
     public function index()
     {
         //
+       
     }
 
     /**
@@ -34,7 +37,28 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate();
+        //validate the data
+
+        $this->validate($request, array('title'=>'required|max:255', 'body'=>'required' ));
+
+        //store in the database
+        // to do this we create a new instance of the post model 
+        $post= new Post;
+
+        $post->title = $request->title;
+        $post->body = $request->body;
+
+        //then the post values been sent above will then be saved to the database by the save() method in the code below
+
+        $post->save();
+
+        //redirect to another page
+
+        return redirect() ->route('posts.show', $post->id);// what this means is that we return a new page which render the show method with a second parameter of the post id. 
+
+
+
+
     }
 
     /**
