@@ -70,8 +70,10 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
+
     {
-        return view('posts.show');
+      $post = Post::find($id);
+        return view('posts.show')->withPost($post);
     }
 
     /**
