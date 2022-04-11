@@ -23,7 +23,7 @@
                 <h3>Post Title</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ratione doloremque saepe facere
                     distinctio vitae quod quidem quas eum, culpa reprehenderit, debitis, est animi. Ducimus corporis
-                    voluptas
+                    voluptas 
                     aperiam facilis fugiat!</p>
                 <a href="#" class="btn btn-primary">Read More</a>
             </div>

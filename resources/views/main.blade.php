@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-@include('partials/_head')
+    <head>
+        @include('partials/_head')
+    </head>
+
 
 <body>
     @include('partials/_nav')
@@ -9,6 +12,7 @@
 
     {{-- ===============remaining body========================== --}}
     <div class="container">
+        @include('partials/_messages')
 
         @yield('content')
         @include('partials/_footer')
@@ -19,6 +23,6 @@
 
     @include('partials._javascript')
 
-</body>
+</body> 
 
 </html>
